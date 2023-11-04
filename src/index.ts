@@ -46,3 +46,32 @@ console.log(variable1)
 const enum LoadingState {Idle, Loading, Success, Error}
 
 const estado = LoadingState.Success
+
+//-----------------------------TIPO OBJETO--------------------------------
+
+//const objeto = {id:1, nombre: ''}
+
+type Direccion = {
+    numero: number,
+    calle: string,
+    pais: string
+}
+type Persona ={
+    readonly id: number,     //dato de lectura
+    nombre?: string,         //por si esta o no esta
+    talla: Talla,
+    direccion: Direccion
+}
+const objeto: Persona = {
+    id:1, 
+    nombre: 'Felipe', 
+    talla: Talla.Mediana,
+    direccion: {
+        numero: 1,
+        calle:'calle falsa',
+        pais:'Argentina'
+    }
+}
+
+//Arreglo que contiene solo objetos persona
+const arr: Persona[] = []
